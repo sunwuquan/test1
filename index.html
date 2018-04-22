@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=yes">
+    <title>欧冠竞猜理财</title>
+    <!--<script type="text/javascript"src="jquery-3.2.1.js"></script>-->
+    <link rel="stylesheet" href="css/index.css">
+
+    <style type="text/css">
+        html{
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<!--标题-->
+<header id="header">
+    <a href="#"><img src="./images/back.gif" alt="返回"></a>
+    <h1>欧冠竞猜理财</h1>
+</header>
+<div class="pic">
+    <img src="./images/pic.png" alt="标题">
+</div>
+<div class="plan">
+    <div class="plan_top">
+        <div class="plan_top_title">
+            <span class="p_line"></span>
+            <img src="./images/rmb.png" alt="">
+            <span>理财方案</span>
+            <span class="p_line"></span>
+        </div>
+    </div>
+        <p class="text1 clear">方案均为懂球帝&苏宁金融合作出品</p>
+        <p class="text2"><span>4.00%</span>保底年化收益</p>
+</div>
+
+<div class="list clear">
+    <ul>
+        <li>
+            <p class     ="title">猜冠军</p>
+            <p class="numb"><span>+79.5</span></p>
+            <p class="content1">最高年化收益</p>
+            <p class="day1">120天&nbsp;1000元起</p>
+            <div class="btn">
+                <span href="javascript:void(0);">我要抢</span>
+            </div>
+        </li>
+        <li>
+            <p class="title">猜最佳射手</p>
+            <p class="numb"><span>+37.5</span></p>
+            <p class="content1">最高年化收益</p>
+            <p class="day1">120天&nbsp;1000元起</p>
+            <div class="btn">
+                <span href="javascript:void(0);">我要抢</span>
+            </div>
+        </li>
+        <li>
+            <p class="title">猜八强</p>
+            <p class="numb"><span>+135.8</span></p>
+            <p class="content1">最高年化收益</p>
+            <p class="day1">120天&nbsp;1000元起</p>
+            <div class="btn">
+                <span href="javascript:void(0);">我要抢</span>
+            </div>
+        </li>
+        <li>
+            <p class="title">猜胜平负</p>
+            <p class="numb"><span>+158.2</span></p>
+            <p class="content1">最高年化收益</p>
+            <p class="day1">120天&nbsp;1000元起</p>
+            <div class="btn">
+                <span href="javascript:void(0);">我要抢</span>
+            </div>
+        </li>
+    </ul>
+</div>
+<!--活动须知-->
+<footer class="footer">
+    <div class="message_title">
+        活动须知
+    </div>
+    <div class="message_content" id="messge_content">
+        <p>1.本次活动有效期为：2016年2月6日至2016-2017赛季欧洲冠军联赛结束</p>
+        <p>2.贴息率不固定，实际贴息以用户购买时的收益率计算为准</p>
+        <p>3.在活动期间，投资活动项目，未全部猜对的用户，除本金外，将获得苏...</p>
+        <p>4.在活动期间，投资活动项目，未全部猜对的用户，除本金外，将获得苏...</p>
+        <p>5.在活动期间，投资活动项目，未全部猜对的用户，除本金外，将获得苏...</p>
+    </div>
+    <div class="message_b">
+        <button id="add" onclick="add()" class="bg1">展开全部</button>
+    </div>
+</footer>
+<script type="text/javascript" src="zepto.js"></script>
+<script type="text/javascript">
+
+    $(
+        $("#add").on("click",function () {
+        var aDd=document.getElementById("add");
+        var aMessage=document.getElementById("messge_content");
+//        $(".hd").toggle();
+        if(aDd.className=="bg1"){
+            aDd.className="bg2";
+            aMessage.className="message_content1";
+        }else {
+            aDd.className="bg1";
+            aMessage.className="message_content";
+        }
+        }),
+      $.ajax({
+          type:"get",
+          url:"http://m.xiangsong.cn/mob/home/getshowarealist",
+          data:{
+              id:5,
+              type:"new"
+          },
+          timeout:5000,
+          dataType:"json",
+          success:function (data) {
+//              for(var i=0;i<data.length;i++){
+//
+//              }
+          }
+      })
+    );
+</script>
+</body>
+</html>
