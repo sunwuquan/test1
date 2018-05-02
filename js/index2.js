@@ -29,7 +29,7 @@ $("#clicks").on("click","button",function () {
         array.remove($(this).data("id"));
         console.log(array)
     }
-
+    // return array;
 });
 Array.prototype.remove = function(val) {
     var index = this.indexOf(val);
@@ -37,11 +37,26 @@ Array.prototype.remove = function(val) {
         this.splice(index, 1);
     }
 };
-
+//
+// $("#btn_submit").click(function () {
+//     $("#layer").slideDown(2000);
+//
+// });
+// $("#out_").click(function () {
+//     $("#layer").slideUp(2000);
+// });
 $("#btn_submit").click(function () {
-    $("#layer").slideDown(2000);
-
+    if(array.length==4){
+        $("#layer").slideDown("slow");
+        for(i in array){
+         console.log(i);
+        }
+        console.log(array);
+    }else {
+        console.log("请选择4个");
+    }
 });
-$("#tijiao").click(function () {
-    $("#layer").slideUp(2000);
+$("#out_").click(function () {
+    console.log("退出");
+    $("#layer").slideUp("slow");
 });
